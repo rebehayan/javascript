@@ -1,0 +1,14 @@
+details {
+  > div {
+    transition: 0.5s allow-discrete;
+    opacity: 0;
+  }
+  &[open] {
+    > div {
+      opacity: 1;
+      @starting-style {
+        opacity: 0;
+      }
+    }
+  }
+}
