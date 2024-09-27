@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM</title>
+  <link rel="stylesheet" href="07-DOM.css">
+  <script src="07-DOM.js" defer></script>
+</head>
+
+<body>
+  <h2>DOM 선택자</h2>
+  <ul class="selector">
+    <li class="item1 item"><span>1</span></li>
+    <li class="item2"><i>2</i></li>
+    <li class="item3">3</li>
+    <li class="item4">4</li>
+    <li class="item5"><em>5</em></li>
+  </ul>
+  <hr>
+  <h2>DOM 클래스 제어</h2>
+  <nav class="tabs">
+    <ul>
+      <li><button class="active">Tab1</button></li>
+      <li><button>Tab2</button></li>
+      <li><button>Tab3</button></li>
+    </ul>
+  </nav>
+  <hr>
+  <h2>DOM 텍스트 제어</h2>
+  <div class="text">
+    <div>
+      <h3>As-Is</h3>
+      <span class="asis">$12,340,450</span>
+    </div>
+    <div>
+      <h3>To-Be</h3>
+      <span class="tobe">-</span>
+    </div>
+    <button>Control Text</button>
+  </div>
+  <hr>
+  <h2>DOM 속성 제어</h2>
+  <ul class="attribute">
+    <li>
+      <img src="./images/default.jpg" alt="" class="image">
+      <button class="btn-change">이미지변경</button>
+    </li>
+    <li>
+      <img src="./images/001.jpg" class="img">
+      <button class="btn-add">대체텍스트 추가</button>
+    </li>
+    <li>
+      <input type="tel" class="tel" disabled placeholder="전화번호">
+      <button class="btn-disabled">비활성화 해제</button>
+    </li>
+    <li>
+      <input type="text" class="guide" placeholder="안내메세지">
+      <button class="btn-placeholder">placeholder 정보</button>
+    </li>
+    <li>
+      <a href="#none" class="data" data-icon="🎪">링크</a>
+      <button class="btn-data">data-속성</button>
+    </li>
+    <li>
+      <input type="text" class="value" value="입력된텍스트">
+      <button class="btn-value">value 값</button>
+    </li>
+    <li>
+      <label class="check"><input type="checkbox"><span>체크확인</span></label>
+      <button class="btn-check">checked 값</button>
+    </li>
+
+  </ul>
+  <hr>
+  <h2>DOM CSS 제어</h2>
+  <div class="css-block">
+    <div class="inline">
+      <strong>
+        AI Buriji Dubai<br>
+        Technology<br>
+        Investment
+      </strong>
+      <p>ID : 7700990</p>
+      <button>Upgrade now</button>
+    </div>
+    <div class="variable">
+      <strong>
+        AI Buriji Dubai<br>
+        Technology<br>
+        Investment
+      </strong>
+      <p>ID : 7700990</p>
+      <button>Subscribe now</button>
+    </div>
+  </div>
+  <hr>
+  <h2>DOM 탐색</h2>
+  <div class="parent">
+    <div class="child">div</div>
+    <p class="child block">p</p>
+    <span class="child">span</span>
+    <i class="child">i</i>
+  </div>
+  <hr>
+  <h2>DOM 삽입</h2>
+  <div class="insert-wrapper">
+    <div class="insert">
+      <div class="children">children</div>
+    </div>
+  </div>
+  <hr>
+</body>
+
+</html>

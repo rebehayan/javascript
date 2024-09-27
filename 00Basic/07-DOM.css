@@ -1,0 +1,237 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-style: normal;
+}
+body {
+  padding: 30px;
+}
+h2 {
+  font-size: 50px;
+}
+hr {
+  margin-block: 30px 50px;
+}
+button {
+  cursor: pointer;
+}
+.selector {
+  display: flex;
+  gap: 10px;
+  list-style: none;
+  li {
+    background-color: dodgerblue;
+    border-radius: 40%;
+    width: 100px;
+    aspect-ratio: 1;
+    color: white;
+    text-align: center;
+    align-content: center;
+    font-size: 40px;
+    &.active {
+      color: dodgerblue;
+      background-color: white;
+    }
+  }
+}
+
+.tabs {
+  ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  li {
+    flex: 1;
+  }
+  button {
+    width: 100%;
+    font-size: 40px;
+    padding-block: 15px;
+    border-radius: 100px;
+    background-color: whitesmoke;
+    border: 3px solid transparent;
+    &.active {
+      border-color: dodgerblue;
+    }
+  }
+}
+
+.text {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  div {
+    padding: 15px 30px;
+    border-radius: 20px;
+    background-color: whitesmoke;
+    h3 {
+      font-size: 30px;
+      color: silver;
+    }
+    span {
+      font-size: 20px;
+    }
+  }
+  button {
+    grid-column: 1/-1;
+    padding: 20px;
+    background-color: dodgerblue;
+    border-radius: 20px;
+    color: white;
+    font-size: 40px;
+    border: none;
+  }
+}
+.attribute {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  list-style: none;
+  li {
+    display: grid;
+    grid-template-rows: min-content 1fr;
+    align-items: start;
+    gap: 10px;
+    padding: 15px 30px;
+    border-radius: 20px;
+    background-color: whitesmoke;
+  }
+  button {
+    padding: 10px;
+    background-color: dodgerblue;
+    margin-top: 10px;
+    border-radius: 15px;
+    color: white;
+    font-size: 25px;
+    border: none;
+  }
+  input {
+    height: 50px;
+    padding-inline: 10px;
+    font-size: 18px;
+    border-radius: 15px;
+    border: 2px solid silver;
+  }
+  img {
+    border: 2px solid silver;
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+  }
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    text-decoration: 2px wavy underline red;
+    text-underline-offset: 10px;
+    line-height: 1;
+    color: slategrey;
+    &::before {
+      content: attr(data-icon);
+    }
+  }
+  [disabled] {
+    opacity: 0.5;
+  }
+  label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+    input {
+      width: 25px;
+    }
+  }
+}
+
+.css-block {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  > div {
+    display: grid;
+    gap: 20px;
+    border: 2px solid hsl(var(--wrap, 39), 100%, 50%);
+    background-color: hsl(var(--wrap, 39), 100%, 95%);
+    border-radius: 10px;
+    padding: 30px;
+  }
+  strong {
+    color: var(--title, slategray);
+    font-size: 20px;
+  }
+  p {
+    font-size: 14px;
+    color: var(--id, silver);
+  }
+  button {
+    background-color: hsl(var(--wrap, 39), 100%, 50%);
+    padding-block: 20px;
+    font-size: 18px;
+    color: white;
+    border: none;
+    border-radius: 10px;
+  }
+}
+.dialog {
+  position: fixed;
+  inset: 50% auto auto 50%;
+  translate: -50% -50%;
+  padding: 30px;
+  gap: 20px;
+  border: 3px solid #000;
+  &.active {
+    display: grid;
+  }
+}
+
+.parent {
+  display: flex;
+  background-color: silver;
+  * {
+    flex: 1;
+    border: 5px solid;
+    padding: 40px;
+    margin: 10px;
+    color: white;
+    font-size: 30px;
+  }
+  div {
+    background-color: blueviolet;
+  }
+  p {
+    background-color: violet;
+  }
+  span {
+    background-color: darkorchid;
+  }
+  i {
+    background-color: lightpink;
+  }
+}
+
+.insert-wrapper {
+  padding: 15px 30px;
+  border-radius: 20px;
+  background-color: whitesmoke;
+
+  .insert {
+    border: 2px solid lightseagreen;
+    padding: 20px;
+    border-radius: 15px;
+  }
+  .children {
+    padding: 10px;
+    background-color: dodgerblue;
+    border-radius: 15px;
+    color: white;
+    font-size: 25px;
+  }
+  *:not(.insert) {
+    font-size: 25px;
+    padding: 10px;
+    margin: 10px;
+  }
+}

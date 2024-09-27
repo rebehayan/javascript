@@ -1,0 +1,77 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  padding: 30px calc(30vw + 20px) 30px 30px;
+}
+:is(hr, form) {
+  margin-block: 30px;
+}
+button {
+  padding: 20px 50px;
+  border-radius: 1000px;
+  font-size: 30px;
+  color: #fff;
+  background-color: forestgreen;
+  border: 3px solid transparent;
+  font-weight: 900;
+  cursor: pointer;
+  form & {
+    padding: 10px 30px;
+    font-size: 20px;
+    font-weight: 700;
+    background-color: coral;
+  }
+}
+fieldset {
+  border: 2px solid silver;
+  padding: 20px;
+  display: flex;
+  gap: 10px;
+  legend {
+    font-size: 20px;
+    padding-inline: 15px;
+  }
+  :is(input, select) {
+    height: 49px;
+    border: 3px solid coral;
+    border-radius: 100px;
+    width: 200px;
+    box-sizing: border-box;
+    padding-inline: 20px;
+    font-size: 20px;
+  }
+}
+h2 {
+  position: fixed;
+  inset: 10% 20px auto 70%;
+  translate: 0 -130%;
+  font-size: 16px;
+}
+.message {
+  position: fixed;
+  inset: 10% 20px 30% 70%;
+  background-color: white;
+  border: 2px solid silver;
+  overflow: auto;
+  scrollbar-width: thin;
+  padding: 10px;
+  div {
+    animation: fade 1 1.5s both;
+    line-height: 1.8;
+    word-break: break-all;
+  }
+}
+.target {
+  div {
+    display: flex;
+    gap: 30px;
+  }
+}
+
+@keyframes fade {
+  100% {
+    opacity: 0.5;
+  }
+}
