@@ -5,39 +5,98 @@
 body {
   padding: 30px;
 }
-
 button {
-  &:not(.promotion button) {
-    padding: 20px 50px;
-    border-radius: 1000px;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+.character {
+  position: relative;
+  isolation: isolate;
+  img {
+    width: 100%;
+  }
+  &::after {
+    content: "";
+    background-color: lightskyblue;
+    position: absolute;
+    z-index: -1;
+    inset: 50px;
+    border-radius: 100px;
+    transform: skew(-2deg, -1.5deg);
+    border: 1px solid skyblue;
+  }
+  .name {
+    position: absolute;
+    inset: auto auto 15px 50%;
+    translate: -50%;
+    white-space: nowrap;
+    border-radius: 100px;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 15px 30px;
+    backdrop-filter: blur(10px);
     font-size: 30px;
-    color: #fff;
-    background: linear-gradient(to bottom, slateblue, blueviolet);
-    border: 3px solid transparent;
     font-weight: 900;
-    cursor: pointer;
+    border: 1px solid skyblue;
   }
 }
 
-.active {
-  color: blueviolet;
-  background: white;
-  border: 3px solid slateblue;
+.header {
+  display: flex;
+  justify-content: space-between;
+  > div {
+    border-radius: 100px;
+    padding: 15px 30px;
+    border: 1px solid skyblue;
+    background-color: rgba(135, 206, 250, 0.1);
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  button {
+    align-content: center;
+    width: 30px;
+    aspect-ratio: 1;
+    font-size: 0;
+    &.active {
+      svg {
+        fill: white;
+      }
+    }
+  }
 }
-h2 {
+.nickname {
   font-size: 50px;
+  font-weight: 700;
+  line-height: 1;
+  padding-block: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  button {
+    width: 70px;
+    aspect-ratio: 1;
+    border-radius: 1000px;
+    border: 1px solid skyblue;
+    background-color: rgba(135, 206, 250, 0.1);
+  }
+  svg {
+    width: 30px;
+  }
 }
-hr {
-  margin-block: 30px;
+.toggle {
+  background: url(./images/bell.svg) no-repeat center / contain;
+  &.active {
+    background: url(./images/bell-slash.svg) no-repeat center / contain;
+  }
 }
 
 .promotion {
   display: grid;
-  grid-template-columns: min-content min-content;
+  grid-template-columns: 1fr min-content 1fr min-content;
   gap: 10px;
-  padding-block: 30px;
+  padding-block: 50px 0;
   input {
-    width: 200px;
     height: 50px;
     padding-inline: 10px;
     border: 3px solid silver;
@@ -54,9 +113,12 @@ hr {
     font-size: 14px;
     cursor: pointer;
   }
-  .text {
-    grid-column: 1/-1;
+  div {
+    grid-column: span 2;
+    grid-row: 2/3;
+    height: 30px;
     color: tomato;
+    align-content: center;
     animation: indent 0.5s infinite alternate cubic-bezier(0.175, 0.885, 0.32, 1.275);
   }
 }
