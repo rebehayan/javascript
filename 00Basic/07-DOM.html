@@ -10,107 +10,289 @@
 </head>
 
 <body>
-  <h2>DOM 선택자</h2>
-  <ul class="selector">
-    <li class="item1 item"><span>1</span></li>
-    <li class="item2"><i>2</i></li>
-    <li class="item3">3</li>
-    <li class="item4">4</li>
-    <li class="item5"><em>5</em></li>
-  </ul>
-  <hr>
-  <h2>DOM 클래스 제어</h2>
-  <nav class="tabs">
-    <ul>
-      <li><button class="active">Tab1</button></li>
-      <li><button>Tab2</button></li>
-      <li><button>Tab3</button></li>
-    </ul>
-  </nav>
-  <hr>
-  <h2>DOM 텍스트 제어</h2>
-  <div class="text">
-    <div>
-      <h3>As-Is</h3>
-      <span class="asis">$12,340,450</span>
-    </div>
-    <div>
-      <h3>To-Be</h3>
-      <span class="tobe">-</span>
-    </div>
-    <button>Control Text</button>
-  </div>
-  <hr>
-  <h2>DOM 속성 제어</h2>
-  <ul class="attribute">
-    <li>
-      <img src="./images/default.jpg" alt="" class="image">
-      <button class="btn-change">이미지변경</button>
-    </li>
-    <li>
-      <img src="./images/001.jpg" class="img">
-      <button class="btn-add">대체텍스트 추가</button>
-    </li>
-    <li>
-      <input type="tel" class="tel" disabled placeholder="전화번호">
-      <button class="btn-disabled">비활성화 해제</button>
-    </li>
-    <li>
-      <input type="text" class="guide" placeholder="안내메세지">
-      <button class="btn-placeholder">placeholder 정보</button>
-    </li>
-    <li>
-      <a href="#none" class="data" data-icon="🎪">링크</a>
-      <button class="btn-data">data-속성</button>
-    </li>
-    <li>
-      <input type="text" class="value" value="입력된텍스트">
-      <button class="btn-value">value 값</button>
-    </li>
-    <li>
-      <label class="check"><input type="checkbox"><span>체크확인</span></label>
-      <button class="btn-check">checked 값</button>
-    </li>
 
-  </ul>
-  <hr>
-  <h2>DOM CSS 제어</h2>
-  <div class="css-block">
-    <div class="inline">
-      <strong>
-        AI Buriji Dubai<br>
-        Technology<br>
-        Investment
-      </strong>
-      <p>ID : 7700990</p>
-      <button>Upgrade now</button>
+  <header class="header">
+    <h1>
+      <span>Hello</span><strong>Your Name</strong>
+      <img src="./images/hand.svg" alt="">
+    </h1>
+    <button aria-label="이미지변경">
+      <img src="./images/person.svg" class="avatar">
+    </button>
+  </header>
+  <main class="main">
+    <nav class="tabs">
+      <ul>
+        <li><button class="active">All Topic</button></li>
+        <li><button>Popular</button></li>
+        <li><button>Newest</button></li>
+        <li><button>Advance</button></li>
+      </ul>
+    </nav>
+    <h2 class="heading">선택자</h2>
+    <ul class="selector">
+      <li class="item1 active">
+        <a href="">
+          <img src="./images/selector1.svg" alt="">
+          <strong>Degital Design Thinking</strong>
+          <div>create by Rebehayan</div>
+        </a>
+      </li>
+      <li class="item2">
+        <a href="">
+          <img src="./images/selector2.svg" alt="">
+          <strong>Web Developer Structures</strong>
+          <div>create by Rebehayan</div>
+        </a>
+      </li>
+      <li class="item3">
+        <a href="">
+          <img src="./images/selector3.svg" alt="">
+          <strong>UI Design Basic Class</strong>
+          <div>create by Rebehayan</div>
+        </a>
+      </li>
+      <li class="item4">
+        <a href="">
+          <img src="./images/selector4.svg" alt="">
+          <strong>Dart SCSS Project Class</strong>
+          <div>create by Rebehayan</div>
+        </a>
+      </li>
+      <li class="item5">
+        <a href="">
+          <img src="./images/selector1.svg" alt="">
+          <strong>HTML5 Basic Course</strong>
+          <div>create by Rebehayan</div>
+        </a>
+      </li>
+      <li class="item6">
+        <a href="">
+          <img src="./images/selector2.svg" alt="">
+          <strong>CSS3 Basic Course</strong>
+          <div>create by Rebehayan</div>
+        </a>
+      </li>
+    </ul>
+    <h2 class="heading">텍스트 제어</h2>
+    <ul class="text-list">
+      <li>
+        <div class="avatar"><img src="./images/avatar1.svg" alt=""></div>
+        <div class="name">Albert Flores</div>
+        <div class="job">UX Trainer</div>
+        <button>수강신청</button>
+      </li>
+      <li>
+        <div class="avatar"><img src="./images/avatar2.svg" alt=""></div>
+        <div class="name">Agent Smith</div>
+        <div class="job">UX Trainer</div>
+        <button>트레이너 이름</button>
+      </li>
+      <li>
+        <div class="avatar"><img src="./images/avatar3.svg" alt=""></div>
+        <div class="name">Doctor Strange</div>
+        <div class="job">Javascript Manager</div>
+        <button>트레이너 직책</button>
+      </li>
+      <li>
+        <div class="avatar"><img src="./images/avatar1.svg" alt=""></div>
+        <div class="name">Rebehayan</div>
+        <div class="job">UX Trainer</div>
+        <button>수강신청</button>
+      </li>
+    </ul>
+    <h2 class="heading">CSS 제어</h2>
+    <ul class="selector css">
+      <li class="item1">
+        <a href="">
+          <img src="./images/selector1.svg" alt="">
+          <strong>Degital Design Thinking</strong>
+          <div>create by Rebehayan</div>
+        </a>
+      </li>
+      <li class="item2">
+        <a href="">
+          <img src="./images/selector2.svg" alt="">
+          <strong>Web Developer Structures</strong>
+          <div>create by Rebehayan</div>
+        </a>
+      </li>
+      <li class="item3">
+        <a href="">
+          <img src="./images/selector3.svg" alt="">
+          <strong>UI Design Basic Class</strong>
+          <div>create by Rebehayan</div>
+        </a>
+      </li>
+      <li class="item4">
+        <a href="">
+          <img src="./images/selector4.svg" alt="">
+          <strong>Dart SCSS Project Class</strong>
+          <div>create by Rebehayan</div>
+        </a>
+      </li>
+      <li class="item5">
+        <a href="">
+          <img src="./images/selector1.svg" alt="">
+          <strong>HTML5 Basic Course</strong>
+          <div>create by Rebehayan</div>
+        </a>
+      </li>
+      <li class="item6">
+        <a href="">
+          <img src="./images/selector2.svg" alt="">
+          <strong>CSS3 Basic Course</strong>
+          <div>create by Rebehayan</div>
+        </a>
+      </li>
+    </ul>
+    <h2 class="heading">DOM 탐색</h2>
+    <ul class="routine-list">
+      <li class="item1">
+        <button>
+          <strong class="day">Day1</strong>
+          <span class="schedule">7개 스케줄</span>
+          <em class="time">5 hour</em>
+        </button>
+        <div class="detail-list">
+          <ul>
+            <li>
+              <strong>Javascript의 이해</strong>
+              <div>30 mins</div>
+              <button aria-label="옵션"></button>
+            </li>
+            <li>
+              <strong>HTML/CSS 기초</strong>
+              <div>45 mins</div>
+              <button aria-label="옵션"></button>
+            </li>
+            <li>
+              <strong>DOM 조작</strong>
+              <div>40 mins</div>
+              <button aria-label="옵션"></button>
+            </li>
+            <li>
+              <strong>Javascript 함수</strong>
+              <div>50 mins</div>
+              <button aria-label="옵션"></button>
+            </li>
+            <li>
+              <strong>이벤트 처리</strong>
+              <div>35 mins</div>
+              <button aria-label="옵션"></button>
+            </li>
+            <li>
+              <strong>API 통신</strong>
+              <div>55 mins</div>
+              <button aria-label="옵션"></button>
+            </li>
+            <li>
+              <strong>JavaScript 디버깅</strong>
+              <div>45 mins</div>
+              <button aria-label="옵션"></button>
+            </li>
+          </ul>
+        </div>
+      </li>
+      <li class="item2">
+        <button>
+          <strong class="day">Day2</strong>
+          <span class="schedule">7개 스케줄</span>
+          <em class="time">6 hour</em>
+        </button>
+        <div class="detail-list">
+          <ul>
+            <li>
+              <strong>React 기초</strong>
+              <div>40 mins</div>
+              <button aria-label="옵션"></button>
+            </li>
+            <li>
+              <strong>React 컴포넌트</strong>
+              <div>50 mins</div>
+              <button aria-label="옵션"></button>
+            </li>
+            <li>
+              <strong>State와 Props</strong>
+              <div>45 mins</div>
+              <button aria-label="옵션"></button>
+            </li>
+            <li>
+              <strong>React Hooks</strong>
+              <div>55 mins</div>
+              <button aria-label="옵션"></button>
+            </li>
+            <li>
+              <strong>React 라우터</strong>
+              <div>40 mins</div>
+              <button aria-label="옵션"></button>
+            </li>
+            <li>
+              <strong>Redux 기초</strong>
+              <div>50 mins</div>
+              <button aria-label="옵션"></button>
+            </li>
+            <li>
+              <strong>Node.js 서버 구축</strong>
+              <div>60 mins</div>
+              <button aria-label="옵션"></button>
+            </li>
+          </ul>
+        </div>
+      </li>
+      <li class="item3">
+        <button>
+          <strong class="day">Day3</strong>
+          <span class="schedule">10개 스케줄</span>
+          <em class="time">12 hour</em>
+        </button>
+      </li>
+    </ul>
+
+  </main>
+  <dialog class="dialog">
+    <h2 class="heading">속성 제어</h2>
+    <button class="close" aria-label="닫기">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+        <path
+          d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+      </svg>
+    </button>
+    <div class="attribute">
+      <h3>Rating</h3>
+      <div class="ratings">
+        <div>
+          <input type="radio" name="rate" id="rate1" value="5"><label for="rate1">5 ⭐</label>
+          <input type="radio" name="rate" id="rate2" value="4"><label for="rate2">4 ⭐</label>
+          <input type="radio" name="rate" id="rate3" value="3"><label for="rate3">3 ⭐</label>
+          <input type="radio" name="rate" id="rate4" value="2"><label for="rate4">2 ⭐</label>
+        </div>
+        <div>
+          <button>모두 비활성</button>
+          <button>선택한 점수 확인</button>
+        </div>
+      </div>
+      <h3>Name</h3>
+      <div class="name">
+        <input type="text" value="리베하얀" readonly>
+        <button>이름변경</button>
+      </div>
+      <h3>Password</h3>
+      <div class="password">
+        <div>
+          <input type="password">
+          <button aria-label="비밀번호 보기"></button>
+          <!-- <button aria-label="비밀번호 보기" class="active"></button> -->
+        </div>
+      </div>
+      <h3>Avatar</h3>
+      <div>
+        <button>프로필 사진변경</button>
+        <button>대체텍스트</button>
+      </div>
     </div>
-    <div class="variable">
-      <strong>
-        AI Buriji Dubai<br>
-        Technology<br>
-        Investment
-      </strong>
-      <p>ID : 7700990</p>
-      <button>Subscribe now</button>
-    </div>
-  </div>
-  <hr>
-  <h2>DOM 탐색</h2>
-  <div class="parent">
-    <div class="child">div</div>
-    <p class="child block">p</p>
-    <span class="child">span</span>
-    <i class="child">i</i>
-  </div>
-  <hr>
-  <h2>DOM 삽입</h2>
-  <div class="insert-wrapper">
-    <div class="insert">
-      <div class="children">children</div>
-    </div>
-  </div>
-  <hr>
+  </dialog>
+
 </body>
 
 </html>

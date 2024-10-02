@@ -13,15 +13,16 @@ button {
 .character {
   position: relative;
   isolation: isolate;
+  text-align: center;
   img {
-    width: 100%;
+    width: 80%;
   }
   &::after {
     content: "";
     background-color: lightskyblue;
     position: absolute;
     z-index: -1;
-    inset: 50px;
+    inset: 50px 100px;
     border-radius: 100px;
     transform: skew(-2deg, -1.5deg);
     border: 1px solid skyblue;
