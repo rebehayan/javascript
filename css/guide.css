@@ -1,0 +1,40 @@
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  color: inherit;
+  box-sizing: border-box;
+}
+body {
+  background-color: #ffffee;
+  padding: 30px;
+}
+summary {
+  font-size: 40px;
+  font-weight: 200;
+  [open] & {
+    background-color: coral;
+    color: white;
+    padding-inline: 20px;
+  }
+}
+ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 10px;
+}
+a {
+  border: 10px solid white;
+  display: block;
+  aspect-ratio: 1;
+  background-color: #f0f0f0;
+  text-align: center;
+  align-content: center;
+  font-size: 14px;
+}
+h2 {
+  font-size: 25px;
+  font-weight: 400;
+  padding: 20px 0 5px;
+}
