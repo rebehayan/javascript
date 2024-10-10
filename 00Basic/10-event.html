@@ -21,6 +21,36 @@
       Parent
       <div class="children">Children</div>
     </div>
+
+    <h2>Event</h2>
+    <div class="parent event-list">
+      <div class="children mouse">마우스 이벤트</div>
+      <input class="children keyboard" placeholder="키보드 이벤트" />
+      <form class="children form">
+        <filedset>
+          <legend>폼 이벤트</legend>
+          <input type="text" />
+          <select name="" id="">
+            <option value="data1">data1</option>
+            <option value="data2">data2</option>
+            <option value="data3">data3</option>
+          </select>
+          <button type="submit">확인</button>
+        </filedset>
+      </form>
+      <div class="children dom">문서/윈도우 이벤트 <a href="#none">페이지변경</a></div>
+    </div>
+
+    <h2>Target</h2>
+    <div class="parent target">
+      Parent
+      <div class="children">Children</div>
+    </div>
+
+    <h2>Keycode</h2>
+    <div class="parent key">
+      <input class="children" />
+    </div>
     <style>
       h2 ~ h2 {
         margin-top: 50px;
@@ -32,7 +62,7 @@
         font-size: 30px;
       }
       :is(.children, .remove) {
-        height: 30vh;
+        height: 300px;
         padding: 20px;
         margin: 10px;
         color: black;
@@ -51,6 +81,41 @@
           padding: 30px;
           font-size: 30px;
           cursor: pointer;
+        }
+      }
+      .key,
+      .event-list {
+        .children {
+          height: auto;
+          min-height: 100px;
+        }
+        input {
+          width: 100%;
+          box-sizing: border-box;
+          font-size: 30px;
+          margin-inline: 0;
+          border: none;
+          &::placeholder {
+            font-size: inherit;
+          }
+        }
+        button,
+        select {
+          font-size: 30px;
+          padding-inline: 10px;
+          height: 80px;
+          box-sizing: border-box;
+        }
+        filedset {
+          display: flex;
+          align-items: center;
+          gap: 20px;
+          input {
+            width: auto;
+            height: 80px;
+            border: 1px solid #000;
+            padding-inline: 10px;
+          }
         }
       }
     </style>

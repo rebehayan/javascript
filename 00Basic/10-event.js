@@ -1,10 +1,8 @@
-const parent = document.querySelector(".parent");
-const children = document.querySelector(".children");
+const key = document.querySelector(".key");
 
-parent.addEventListener("click", () => {
-  console.log("parent");
-});
-children.addEventListener("click", (e) => {
-  e.stopPropagation();
-  console.log("children");
+key.addEventListener("keydown", (event) => {
+  console.log(event.key); // 이벤트 키확인;
+  if (event.ctrlKey && event.key === "a") {
+    console.log("단축키 실행");
+  }
 });
