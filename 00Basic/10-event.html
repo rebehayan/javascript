@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event</title>
+    <script src="10-event.js" defer></script>
+  </head>
+
+  <body>
+    <h2>이벤트 제거</h2>
+    <div class="event">
+      <div class="remove">Event</div>
+    </div>
+    <div class="download">
+      <button>영화다운로드</button>
+    </div>
+
+    <h2>캡처링(Capturing) VS 버블링(Bubbling)</h2>
+    <div class="parent">
+      Parent
+      <div class="children">Children</div>
+    </div>
+    <style>
+      h2 ~ h2 {
+        margin-top: 50px;
+      }
+      :is(.parent, .event) {
+        background-color: var(--bg, cadetblue);
+        padding: 50px;
+        color: white;
+        font-size: 30px;
+      }
+      :is(.children, .remove) {
+        height: 30vh;
+        padding: 20px;
+        margin: 10px;
+        color: black;
+        box-sizing: border-box;
+        background-color: var(--bgChildren, cornsilk);
+        align-content: center;
+      }
+      .event {
+        --bg: tomato;
+        --bgChildren: sandybrown;
+        /* color: sandybrown; */
+      }
+      .download {
+        padding: 30px;
+        button {
+          padding: 30px;
+          font-size: 30px;
+          cursor: pointer;
+        }
+      }
+    </style>
+  </body>
+</html>
