@@ -27,3 +27,7 @@ button {
 fieldset {
   padding: 20px;
 }
+a {
+  color: inherit;
+  text-decoration: none;
+}

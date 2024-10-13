@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+    <script src="15-DOM.js" defer></script>
+  </head>
+  <body>
+    <nav class="controls">
+      <button>윈도우 크기</button>
+      <button>스크롤 위치</button>
+      <button>특정스크롤 이동</button>
+      <button>Border제외한 크기</button>
+      <button>Border+Scroll 포함 크기</button>
+      <button>스크롤 위치</button>
+      <button>요소 절대위치</button>
+      <button>요소 크기와 상대위치</button>
+      <button>data-속성</button>
+      <button>전체창</button>
+      <button>전체높이</button>
+    </nav>
+
+    <div class="block" data-text="데이터처리용 텍스트">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa voluptate ut enim porro id aperiam? Ut culpa similique amet ducimus facere error eius voluptatibus esse? Vel eaque aspernatur
+      incidunt velit?
+    </div>
+    <style>
+      body {
+        height: 300vh;
+        background: linear-gradient(to bottom, darksalmon, hotpink, tomato);
+      }
+      .controls {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        position: sticky;
+        inset: 10px 0 auto;
+        background-color: rgba(0, 0, 0, 0.2);
+        padding: 10px;
+      }
+      button {
+        font-size: 20px;
+        border: 1px solid black;
+        padding: 5px;
+        cursor: pointer;
+        &.active {
+          color: white;
+          background-color: black;
+        }
+      }
+      .block {
+        position: fixed;
+        width: 20%;
+        aspect-ratio: 1;
+        overflow: auto;
+        font-size: 30px;
+        inset: 0;
+        margin: auto;
+        background-color: white;
+        padding: 10px;
+        border: 2px solid black;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+      }
+    </style>
+  </body>
+</html>

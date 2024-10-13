@@ -51,6 +51,12 @@
     <div class="parent key">
       <input class="children" />
     </div>
+
+    <h2>Animation End</h2>
+    <div class="parent ani">
+      <div class="children"></div>
+    </div>
+
     <style>
       h2 ~ h2 {
         margin-top: 50px;
@@ -116,6 +122,39 @@
             border: 1px solid #000;
             padding-inline: 10px;
           }
+        }
+      }
+      .ani {
+        .children {
+          width: 10%;
+          animation: var(--ani, ani) 1 2s both cubic-bezier(0.455, 0.03, 0.515, 0.955);
+          background-color: var(--bg, pink);
+          transition: 1s;
+        }
+      }
+      @keyframes ani {
+        100% {
+          width: 100%;
+        }
+      }
+      @keyframes size {
+        0% {
+          width: 100%;
+        }
+        100% {
+          width: 100px;
+          height: 100px;
+        }
+      }
+      @keyframes move {
+        0% {
+          width: 100px;
+          height: 100px;
+        }
+        100% {
+          translate: 200px;
+          width: 100px;
+          height: 100px;
         }
       }
     </style>

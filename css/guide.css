@@ -19,6 +19,17 @@ summary {
     padding-inline: 20px;
   }
 }
+details {
+  ~ details {
+    margin-top: 50px;
+  }
+  div {
+    padding: 20px 10px;
+    [open] & {
+      border: 5px solid coral;
+    }
+  }
+}
 ul {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
