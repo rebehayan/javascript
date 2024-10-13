@@ -6,13 +6,21 @@
   color: inherit;
   box-sizing: border-box;
 }
+html {
+  scrollbar-width: thin;
+}
 body {
   background-color: #ffffee;
   padding: 30px;
 }
+h1 {
+  text-align: center;
+  padding: 0 0 30px;
+}
 summary {
   font-size: 40px;
   font-weight: 200;
+  transition: 0.4s;
   [open] & {
     background-color: coral;
     color: white;
@@ -25,14 +33,13 @@ details {
   }
   div {
     padding: 20px 10px;
-    [open] & {
-      border: 5px solid coral;
-    }
+    border: 3px solid coral;
+    border-radius: 0 0 10px 10px;
   }
 }
 ul {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
   gap: 10px;
 }
 a {
@@ -43,6 +50,11 @@ a {
   text-align: center;
   align-content: center;
   font-size: 14px;
+  b {
+    display: block;
+    font-size: 16px;
+    color: tomato;
+  }
 }
 h2 {
   font-size: 25px;
