@@ -17,14 +17,14 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
     rel="stylesheet" />
-  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="../css/style.css" />
 </head>
 
 <body>
   <header class="header">
     <div class="header__wrap">
       <h1>
-        <a href=""><img src="./images/logo.svg" alt="Rebehayan Learning Platform" /></a>
+        <a href=""><img src="../images/logo.svg" alt="Rebehayan Learning Platform" /></a>
       </h1>
       <nav class="gnb">
         <ul>
@@ -70,7 +70,7 @@
       <div class="profile">
         <div class="profile__name"><strong>하성필님</strong> 안녕하세요!</div>
         <button class="avatar" popovertarget="alram">
-          <img src="./images/@avatar.png" alt="" />
+          <img src="../images/@avatar.png" alt="" />
           <span class="profile__alram">12</span>
         </button>
         <div class="alram" id="alram" popover>
@@ -141,199 +141,68 @@
     </div>
   </header>
   <main>
-    <div class="visual-index">
-      <div class="visual-index__text">
-        <strong>Total Marketing Solution Company</strong>
-        <p>
-          콘텐츠 경쟁력을 바탕으로 국내외 성장을 지속하고 있습니다.<br>
-          공정한 IR 커뮤니케이션을 통해 투자가 여러분과 함께하겠습니다.
-        </p>
-      </div>
-      <div class="visual-index__controls">
-        <button class="btn-play">PAUSE</button>
-      </div>
-      <img src="./images/visual_index.png" alt="" class="visual-index__bg">
-    </div>
-    <section class="idp">
-      <h2 class="heading lg">IDP</h2>
-      <p class="text-type1 mt20">
-        경쟁력과 전문성을 제고하고 전문분야별로 우수인재를 양성·관리해 나가는
-        종합적 인적자원 개발시스템인 경력개발제도(IDP : Individual Development System)를
-        각 부처에 성공적으로 정착시키기 위하여 다양한 프로그램을 지원합니다.
+    <div class="visual">
+      <h2 class="visual__title">배움라운지</h2>
+      <p class="visual__text">
+        Rebehayan은 콘텐츠 경쟁력을 바탕으로 국내외 성장을 지속하고 있습니다.<br />
+        공정한 IR 커뮤니케이션을 통해 투자가 여러분과 함께하겠습니다.
       </p>
-      <div class="idp__info">
-        <div>
-          <img src="./images/img_idp.png" alt="">
-          <h3>Mento</h3>
-          <strong>한성영</strong>
-          <p class="mt10">꿈키움 지원사업은 문화·교육의 기회를 제공하는 '공부방제안서', '문화지원프로그램'과
-            창...</p>
-          <a href="" class="btn-more mt22">바로가기</a>
-        </div>
-        <div>
-          <img src="./images/img_idp2.png" alt="">
-          <h3>Menti</h3>
-          <strong>박영준</strong>
-          <p class="mt10">꿈키움 지원사업은 문화·교육의 기회를 제공하는 '공부방제안서', '문화지원프로그램'과
-            창...</p>
-          <a href="" class="btn-more mt22">바로가기</a>
-        </div>
+    </div>
+    <div class="container">
+      <!-- 본문 시작 -->
+      <h3 class="heading base">자유게시판</h3>
+      <table class="table-type1 mt60">
+        <caption>자유게시판 글쓰기</caption>
+        <colgroup>
+          <col style="width: 200px;">
+          <col>
+        </colgroup>
+        <tbody>
+          <tr>
+            <th>구분</th>
+            <td>
+              <select class="select" style="--width:270px">
+                <option>선택</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <th>글제목</th>
+            <td>
+              <input class="input" type="text" style="--width:800px" placeholder="글제목을 입력하세요.">
+            </td>
+          </tr>
+          <tr>
+            <th>글내용</th>
+            <td>
+              <textarea style="--width:100%; --height:400px;" placeholder="글내용을 입력하세요."></textarea>
+            </td>
+          </tr>
+          <tr>
+            <th>교육자료</th>
+            <td>
+              <input type="text" name="" id="" class="input" style="--width:470px" readonly>
+              <button class="btn white base ico2">파일 업로드</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="align center mt30 btn-group-type2">
+        <button class="btn white base">등록</button>
+        <button class="btn white base">취소</button>
       </div>
-    </section>
-    <div class="mxauto">
-      <h2 class="heading base">러닝라운지</h2>
-      <nav>
-        <ul class="tab-type1">
-          <li><button class="--active">전체</button></li>
-          <li><button>문화예술</button></li>
-          <li><button>인문학</button></li>
-          <li><button>글로벌</button></li>
-          <li><button>리더십</button></li>
-        </ul>
-      </nav>
-      <ul class="list-type1">
-        <li>
-          <a href="">
-            <div class="thumbnail">
-              <img src="./images/@thumbnail.png" alt="">
-            </div>
-            <div class="badges">
-              <span class="badge orange">경영</span>
-              <span class="badge coin">100</span>
-            </div>
-            <strong class="list-type1__title">공연문화와 크리에이티브</strong>
-            <div class="hash">
-              <span>#상급매니저과정</span>
-              <span>#팀장이상</span>
-              <span>#리더십</span>
-            </div>
-            <ul class="list-type2">
-              <li>
-                <span>형 태</span>
-                <div>온라인/오프라인/온+오프라인</div>
-              </li>
-              <li>
-                <span>일 정</span>
-                <div>2021.04.20 ~ 2021.04.25</div>
-              </li>
-            </ul>
-            <div class="list-type1__date">신청기간 : 2021.04.10 ~ 2021.04.15</div>
-          </a>
-        </li>
-        <li>
-          <a href="">
-            <div class="thumbnail">
-              <img src="./images/@thumbnail.png" alt="">
-            </div>
-            <div class="badges">
-              <span class="badge orange">경영</span>
-              <span class="badge coin">100</span>
-            </div>
-            <strong class="list-type1__title">공연문화와 크리에이티브</strong>
-            <div class="hash">
-              <span>#상급매니저과정</span>
-              <span>#팀장이상</span>
-              <span>#리더십</span>
-            </div>
-            <ul class="list-type2">
-              <li>
-                <span>형 태</span>
-                <div>온라인/오프라인/온+오프라인</div>
-              </li>
-              <li>
-                <span>일 정</span>
-                <div>2021.04.20 ~ 2021.04.25</div>
-              </li>
-            </ul>
-            <div class="list-type1__date">신청기간 : 2021.04.10 ~ 2021.04.15</div>
-          </a>
-        </li>
-        <li>
-          <a href="">
-            <div class="thumbnail">
-              <img src="./images/@thumbnail.png" alt="">
-            </div>
-            <div class="badges">
-              <span class="badge orange">경영</span>
-              <span class="badge coin">100</span>
-            </div>
-            <strong class="list-type1__title">공연문화와 크리에이티브</strong>
-            <div class="hash">
-              <span>#상급매니저과정</span>
-              <span>#팀장이상</span>
-              <span>#리더십</span>
-            </div>
-            <ul class="list-type2">
-              <li>
-                <span>형 태</span>
-                <div>온라인/오프라인/온+오프라인</div>
-              </li>
-              <li>
-                <span>일 정</span>
-                <div>2021.04.20 ~ 2021.04.25</div>
-              </li>
-            </ul>
-            <div class="list-type1__date">신청기간 : 2021.04.10 ~ 2021.04.15</div>
-          </a>
-        </li>
-        <li>
-          <a href="">
-            <div class="thumbnail">
-              <img src="./images/@thumbnail.png" alt="">
-            </div>
-            <div class="badges">
-              <span class="badge orange">경영</span>
-              <span class="badge coin">100</span>
-            </div>
-            <strong class="list-type1__title">공연문화와 크리에이티브</strong>
-            <div class="hash">
-              <span>#상급매니저과정</span>
-              <span>#팀장이상</span>
-              <span>#리더십</span>
-            </div>
-            <ul class="list-type2">
-              <li>
-                <span>형 태</span>
-                <div>온라인/오프라인/온+오프라인</div>
-              </li>
-              <li>
-                <span>일 정</span>
-                <div>2021.04.20 ~ 2021.04.25</div>
-              </li>
-            </ul>
-            <div class="list-type1__date">신청기간 : 2021.04.10 ~ 2021.04.15</div>
-          </a>
-        </li>
-        <li>
-          <a href="">
-            <div class="thumbnail">
-              <img src="./images/@thumbnail.png" alt="">
-            </div>
-            <div class="badges">
-              <span class="badge orange">경영</span>
-              <span class="badge coin">100</span>
-            </div>
-            <strong class="list-type1__title">공연문화와 크리에이티브</strong>
-            <div class="hash">
-              <span>#상급매니저과정</span>
-              <span>#팀장이상</span>
-              <span>#리더십</span>
-            </div>
-            <ul class="list-type2">
-              <li>
-                <span>형 태</span>
-                <div>온라인/오프라인/온+오프라인</div>
-              </li>
-              <li>
-                <span>일 정</span>
-                <div>2021.04.20 ~ 2021.04.25</div>
-              </li>
-            </ul>
-            <div class="list-type1__date">신청기간 : 2021.04.10 ~ 2021.04.15</div>
-          </a>
-        </li>
-      </ul>
-      <button class="btn-more2 mt60">더보기</button>
+
+      <dialog class="dialog">
+        <button class="btn-close" aria-label="닫기"></button>
+        <div class="text-type3 text-center">
+          프로그램 신청이 완료되었습니다.<br>
+          승인 여부는 마이페이지에서 확인하시기 바랍니다.<br>
+          (최대 일주일 소요)
+        </div>
+        <div class="align center mt30"><button class="btn white base">확인</button></div>
+      </dialog>
+
+      <!-- 본문 끝 -->
     </div>
   </main>
   <footer class="footer">
