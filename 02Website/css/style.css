@@ -123,40 +123,40 @@
     color: inherit;
   }
   /* Normalize */
-  input[type=number]::-webkit-inner-spin-button,
-  input[type=number]::-webkit-outer-spin-button {
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
     -webkit-appearance: none;
   }
-  input[type=number] {
+  input[type="number"] {
     -moz-appearance: textfield;
   }
-  input[type=number],
-  input[type=text],
-  input[type=password],
-  input[type=url],
-  input[type=email],
-  input[type=tel],
-  input[type=date],
+  input[type="number"],
+  input[type="text"],
+  input[type="password"],
+  input[type="url"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="date"],
   textarea {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
     border-radius: 0;
   }
-  input[type=search]::-webkit-search-decoration,
-  input[type=search]::-webkit-search-cancel-button,
-  input[type=search]::-webkit-search-results-button,
-  input[type=search]::-webkit-search-results-decoration {
+  input[type="search"]::-webkit-search-decoration,
+  input[type="search"]::-webkit-search-cancel-button,
+  input[type="search"]::-webkit-search-results-button,
+  input[type="search"]::-webkit-search-results-decoration {
     -webkit-appearance: none;
   }
-  input[type=date] {
+  input[type="date"] {
     position: relative;
   }
-  input[type=date]::-webkit-clear-button,
-  input[type=date]::-webkit-inner-spin-button {
+  input[type="date"]::-webkit-clear-button,
+  input[type="date"]::-webkit-inner-spin-button {
     display: none;
   }
-  input[type=date]::-webkit-calendar-picker-indicator {
+  input[type="date"]::-webkit-calendar-picker-indicator {
     position: absolute;
     left: 0;
     top: 0;
@@ -166,15 +166,15 @@
     width: 100%;
     height: 100%;
   }
-  input[type=date] {
+  input[type="date"] {
     position: relative;
     width: 100px;
   }
-  input[type=date]::before {
+  input[type="date"]::before {
     content: attr(data-placeholder);
     width: 100%;
   }
-  input[type=date]:valid::before {
+  input[type="date"]:valid::before {
     display: none;
   }
   select {
@@ -260,13 +260,13 @@
       content: "";
       width: 20px;
       height: 19px;
-      background: url(../images/ico_fav.svg) no-repeat 0 0/contain;
+      background: url(../images/ico_fav.svg) no-repeat 0 0 / contain;
     }
     .btn.ico2::after {
       content: "";
       width: 13px;
       height: 13px;
-      background: url(../images/ico_upload.svg) no-repeat 0 0/contain;
+      background: url(../images/ico_upload.svg) no-repeat 0 0 / contain;
     }
     .btn.rounded {
       border-radius: 1000px;
@@ -824,7 +824,7 @@
     .address button {
       justify-self: start;
     }
-    .address input[type=text] {
+    .address input[type="text"] {
       grid-column: 1/-1;
     }
   }
@@ -1152,7 +1152,13 @@
     position: fixed;
     inset: 0 0 auto 0;
     z-index: 100;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) calc(var(--headerHeight) - 1px), rgba(255, 255, 255, 0.1) calc(var(--headerHeight) - 1px), rgba(255, 255, 255, 0.1) var(--headerHeight), var(--white) var(--headerHeight));
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.1) calc(var(--headerHeight) - 1px),
+      rgba(255, 255, 255, 0.1) calc(var(--headerHeight) - 1px),
+      rgba(255, 255, 255, 0.1) var(--headerHeight),
+      var(--white) var(--headerHeight)
+    );
     height: var(--headerHeight);
     transition: 0.5s;
     animation: header 1s both;
@@ -1163,7 +1169,13 @@
   }
   @keyframes header {
     100% {
-      background: linear-gradient(to bottom, rgb(0, 0, 0) calc(var(--headerHeight) - 1px), rgba(255, 255, 255, 0.1) calc(var(--headerHeight) - 1px), rgba(255, 255, 255, 0.1) var(--headerHeight), var(--white) var(--headerHeight));
+      background: linear-gradient(
+        to bottom,
+        rgb(0, 0, 0) calc(var(--headerHeight) - 1px),
+        rgba(255, 255, 255, 0.1) calc(var(--headerHeight) - 1px),
+        rgba(255, 255, 255, 0.1) var(--headerHeight),
+        var(--white) var(--headerHeight)
+      );
       box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
     }
   }
@@ -1499,6 +1511,14 @@
   }
   .gallery img:first-child {
     grid-column: 1/-1;
+  }
+  .gallery button {
+    border: 4px solid transparent;
+    box-sizing: border-box;
+    transition: 0.4s;
+  }
+  .gallery button.active {
+    border-color: #488ad8;
   }
   .lounge-view {
     display: grid;
