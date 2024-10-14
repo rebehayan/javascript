@@ -10,12 +10,46 @@ html {
   scrollbar-width: thin;
 }
 body {
-  background-color: #ffffee;
+  background-color: #f8f7fa;
+  color: #444050;
   padding: 30px;
 }
 h1 {
-  text-align: center;
-  padding: 0 0 30px;
+  font-weight: 400;
+}
+.tab {
+  display: flex;
+  gap: 0;
+  margin-block: 30px;
+  li {
+    flex: 1;
+  }
+  button {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.5s;
+    &.active {
+      color: #fff;
+      background-color: #7367f0;
+      box-shadow: 0 3px 2px 0 rgba(115, 103, 240, 0.3);
+    }
+  }
+}
+[data-tab-content] {
+  display: none;
+  padding: 24px;
+  background-color: white;
+  box-shadow: 0 5px 5px 0 rgba(47, 43, 61, 0.14);
+  border-radius: 8px;
+  &.active {
+    display: block;
+  }
 }
 summary {
   font-size: 40px;
