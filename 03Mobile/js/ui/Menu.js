@@ -5,7 +5,7 @@ export const Menu = () => {
 
   if (!btnOpen || !dialog) {
     // 단일선택자 이므로 DOM객체를 반환하게 된다. 찾지 못하면 null 반환
-    console.log("해당 태그가 존재하지 않습니다.");
+    console.log("메뉴가 존재하지 않습니다.");
     return;
   }
 
