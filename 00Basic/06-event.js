@@ -42,7 +42,12 @@ submit.addEventListener("submit", function (e) {
   const id = submitID.value;
   const nickname = submitNickname.value;
 
-  log("아이디는" + id + "/ 닉네임은" + nickname);
+  if (id === "" || nickname === "") {
+    log("아이디 또는 닉네임을 입력하세요.");
+    return;
+  }
+
+  log("아이디:" + id + " / 닉네임:" + nickname);
 });
 
 target.addEventListener("click", function (e) {
