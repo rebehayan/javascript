@@ -10,19 +10,22 @@ button {
   background-color: transparent;
   border: none;
 }
+::placeholder {
+  color: inherit;
+}
 .character {
   position: relative;
   isolation: isolate;
   text-align: center;
   img {
-    width: 80%;
+    width: 50%;
   }
   &::after {
     content: "";
     background-color: lightskyblue;
     position: absolute;
     z-index: -1;
-    inset: 50px 100px;
+    inset: 30px 150px;
     border-radius: 100px;
     transform: skew(-2deg, -1.5deg);
     border: 1px solid skyblue;
@@ -53,6 +56,9 @@ button {
     display: flex;
     gap: 10px;
     align-items: center;
+    body[style*="-color: black"] & {
+      background-color: rgba(255, 255, 255, 0.5);
+    }
   }
   button {
     align-content: center;
@@ -80,6 +86,9 @@ button {
     border-radius: 1000px;
     border: 1px solid skyblue;
     background-color: rgba(135, 206, 250, 0.1);
+    body[style*="-color: black"] & {
+      background-color: rgba(255, 255, 255, 0.5);
+    }
   }
   svg {
     width: 30px;
@@ -103,6 +112,11 @@ button {
     border: 3px solid silver;
     border-radius: 5px;
     font-size: 15px;
+    body[style*="-color: black"] & {
+      background-color: darkgray;
+      color: white;
+      border-color: seashell;
+    }
   }
   button {
     white-space: nowrap;

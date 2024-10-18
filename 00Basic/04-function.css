@@ -2,14 +2,13 @@ body {
   padding: 50px;
   height: 100vh;
   box-sizing: border-box;
-  background: radial-gradient(circle at center 30%, #9ab1fd, #4957b3);
+  background: radial-gradient(circle at right 20px top 30%, #aec7fd, #2a59d2);
   overflow: hidden;
   * {
     padding: 0;
     margin: 0;
     list-style: none;
     text-decoration: none;
-    color: #fff;
   }
   img {
     width: 100%;
@@ -18,66 +17,51 @@ body {
 .options {
   position: fixed;
   inset: auto 0 0 0;
-  padding: 100px 100px 0;
+  padding: 5% 5% 0;
   translate: 0 50px;
-  &::before,
-  &::after {
-    content: "";
-    position: absolute;
-    inset: 40px 40px 0;
-    border-radius: 50px 50px 0 0;
-    background-color: rgba(255, 255, 255, 0.2);
-    transform: skewY(-5deg);
-  }
-  &::after {
-    backdrop-filter: blur(10px);
-    z-index: -1;
-  }
-  &::before {
-    transform: skewY(-5deg);
-    box-shadow: inset 0px 2px 0 rgba(255, 255, 255, 0.5);
-    background: none;
-    z-index: 1;
-  }
+
   ul {
     position: relative;
     z-index: 3;
     padding-bottom: 100px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+    &:has(li:hover) li:not(:hover) button {
+      opacity: 0.4;
+    }
     li {
       display: grid;
-      justify-content: center;
-      text-align: center;
       gap: 5px;
     }
     button {
       position: relative;
-      width: 130px;
-      aspect-ratio: 1.5;
-      margin-inline: auto;
-      text-align: center;
-      align-content: center;
-      background: linear-gradient(-45deg, white, transparent 40%, transparent 60%, white);
-      border: 1px solid transparent;
-      background-origin: border-box;
-      padding: 5px;
+
+      transition: 0.5s;
+      display: grid;
+      width: 100%;
+      grid-template-rows: 1fr 1fr;
+      aspect-ratio: 1;
+      padding: 20px;
       border-radius: 20px;
-      isolation: isolate;
       font-size: 14px;
       cursor: pointer;
-      &::after {
-        content: "";
-        position: absolute;
-        inset: 1px;
-        border-radius: 15px;
-        background: linear-gradient(-45deg, #9ab1fd, #4957b3);
-        z-index: -1;
+      background-color: rgba(255, 255, 255, 0.7);
+      border: 1px solid white;
+      justify-content: start;
+      backdrop-filter: blur(10px);
+      b {
+        border-radius: 100px;
+        background-color: #f0f2fe;
+        padding: 10px 15px;
+        color: #657ff1;
+        align-self: start;
       }
-    }
-    span {
-      text-align: center;
+      span {
+        align-self: end;
+        text-align: left;
+        font-size: 1rem;
+      }
     }
   }
 }
