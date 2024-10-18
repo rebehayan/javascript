@@ -1,3 +1,4 @@
+// 변수정의
 const nameValue = "CodingPing";
 const levelValue = "LEVEL UP";
 const staminaValue = 12555;
@@ -10,7 +11,7 @@ const shieldIcon = "📫";
 
 const image = "./images/character.webp";
 
-// UI
+// UI 정의
 const type = document.querySelector(".type");
 const nickname = document.querySelector(".name");
 const stamina = document.querySelector(".stamina");
@@ -33,10 +34,11 @@ character.setAttribute("src", image);
 
 const show = () => {
   document.body.insertAdjacentHTML("afterbegin", `<span class="show">Level Up</span>`);
-  setTimeout(() => {
-    document.body.firstChild.remove();
-  }, 600);
+  const lvup = document.querySelector(".show");
+  lvup.addEventListener("animationend", (e) => {
+    e.target.remove();
+  });
 };
 
-// 레벨업
+// 이벤트실행
 levelup.addEventListener("click", show);

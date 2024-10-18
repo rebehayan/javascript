@@ -1,8 +1,9 @@
+// 변수정의
 const staminaIcon = "🦾";
 const attackIcon = "🔪";
 const shieldIcon = "📫";
 
-// UI
+// UI 정의
 const nickname = document.querySelector(".name");
 const stamina = document.querySelector(".stamina");
 const attack = document.querySelector(".attack");
@@ -15,9 +16,11 @@ shield.dataset.icon = shieldIcon;
 
 const show = () => {
   document.body.insertAdjacentHTML("afterbegin", `<span class="show">Level Up</span>`);
-  setTimeout(() => {
-    document.body.firstChild.remove();
-  }, 600);
+  const lvup = document.querySelector(".show");
+  lvup.addEventListener("animationend", (e) => {
+    e.target.remove();
+  });
 };
 
+// 이벤트실행
 levelup.addEventListener("click", show);
