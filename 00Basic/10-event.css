@@ -1,13 +1,82 @@
-h2 ~ h2 {
-  margin-top: 50px;
+* {
+  padding: 0;
+  margin: 0;
 }
-:is(.parent, .event) {
+body {
+  padding: 20px;
+}
+:is(hr, form) {
+  margin-block: 40px 1rem;
+}
+h2 {
+  margin-block: 40px 10px;
+}
+
+button {
+  border-radius: 1000px;
+  padding: 10px 30px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  background-color: coral;
+  border: 3px solid transparent;
+  cursor: pointer;
+  &:disabled {
+    opacity: 0.4;
+  }
+}
+.event {
+  display: grid;
+  gap: 0 20px;
+  grid-template:
+    "h2-1 h2-2"
+    "parent-1 parent-2";
+
+  h2 {
+    &:nth-of-type(1) {
+      grid-area: h2-1;
+    }
+    &:nth-of-type(2) {
+      grid-area: h2-2;
+    }
+  }
+  .parent {
+    &:nth-of-type(1) {
+      grid-area: parent-1;
+    }
+    &:nth-of-type(2) {
+      grid-area: parent-2;
+    }
+  }
+}
+
+fieldset {
+  border: 2px solid silver;
+  padding: 20px;
+  display: grid;
+  gap: 10px;
+  legend {
+    font-size: 20px;
+    padding-inline: 15px;
+  }
+  :is(input, select) {
+    height: 49px;
+    border: 3px solid coral;
+    border-radius: 100px;
+    width: 100%;
+    box-sizing: border-box;
+    padding-inline: 20px;
+    font-size: 20px;
+  }
+}
+
+.parent {
   background-color: var(--bg, cadetblue);
   padding: 50px;
   color: white;
   font-size: 30px;
 }
-:is(.children, .remove) {
+.children {
   height: 300px;
   padding: 20px;
   margin: 10px;
@@ -16,52 +85,48 @@ h2 ~ h2 {
   background-color: var(--bgChildren, cornsilk);
   align-content: center;
 }
-.event {
-  --bg: tomato;
-  --bgChildren: sandybrown;
-  /* color: sandybrown; */
-}
-.download {
-  padding: 30px;
-  button {
-    padding: 30px;
-    font-size: 30px;
-    cursor: pointer;
-  }
-}
-.key,
 .event-list {
-  .children {
-    height: auto;
-    min-height: 100px;
-  }
-  input {
+  :is(input, select) {
+    height: 49px;
+    border: 3px solid coral;
+    border-radius: 100px;
     width: 100%;
     box-sizing: border-box;
-    font-size: 30px;
-    margin-inline: 0;
-    border: none;
-    &::placeholder {
-      font-size: inherit;
+    padding-inline: 20px;
+    font-size: 20px;
+  }
+}
+fieldset {
+  border: 2px solid silver;
+  padding: 20px;
+  .form & {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    button {
+      grid-column: 1/-1;
     }
   }
-  button,
-  select {
-    font-size: 30px;
-    padding-inline: 10px;
-    height: 80px;
-    box-sizing: border-box;
+  legend {
+    font-size: 20px;
+    padding-inline: 15px;
   }
-  filedset {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    input {
-      width: auto;
-      height: 80px;
-      border: 1px solid #000;
-      padding-inline: 10px;
-    }
+}
+.keyboard {
+  width: 100%;
+}
+.mouse {
+  background-color: blueviolet;
+  color: white;
+  padding: 1rem;
+}
+.dom {
+  background-color: brown;
+  color: white;
+  padding: 1rem;
+  a {
+    display: block;
+    color: inherit;
   }
 }
 .ani {
