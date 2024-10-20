@@ -1,0 +1,99 @@
+h2 ~ h2 {
+  margin-top: 50px;
+}
+:is(.parent, .event) {
+  background-color: var(--bg, cadetblue);
+  padding: 50px;
+  color: white;
+  font-size: 30px;
+}
+:is(.children, .remove) {
+  height: 300px;
+  padding: 20px;
+  margin: 10px;
+  color: black;
+  box-sizing: border-box;
+  background-color: var(--bgChildren, cornsilk);
+  align-content: center;
+}
+.event {
+  --bg: tomato;
+  --bgChildren: sandybrown;
+  /* color: sandybrown; */
+}
+.download {
+  padding: 30px;
+  button {
+    padding: 30px;
+    font-size: 30px;
+    cursor: pointer;
+  }
+}
+.key,
+.event-list {
+  .children {
+    height: auto;
+    min-height: 100px;
+  }
+  input {
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 30px;
+    margin-inline: 0;
+    border: none;
+    &::placeholder {
+      font-size: inherit;
+    }
+  }
+  button,
+  select {
+    font-size: 30px;
+    padding-inline: 10px;
+    height: 80px;
+    box-sizing: border-box;
+  }
+  filedset {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    input {
+      width: auto;
+      height: 80px;
+      border: 1px solid #000;
+      padding-inline: 10px;
+    }
+  }
+}
+.ani {
+  .children {
+    width: 10%;
+    animation: var(--ani, ani) 1 2s both cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    background-color: var(--bg, pink);
+    transition: 1s;
+  }
+}
+@keyframes ani {
+  100% {
+    width: 100%;
+  }
+}
+@keyframes size {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 100px;
+    height: 100px;
+  }
+}
+@keyframes move {
+  0% {
+    width: 100px;
+    height: 100px;
+  }
+  100% {
+    translate: 200px;
+    width: 100px;
+    height: 100px;
+  }
+}
