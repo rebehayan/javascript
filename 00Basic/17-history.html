@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>History</title>
     <script src="17-history.js" defer></script>
+    <link rel="stylesheet" href="17-history.css" />
   </head>
   <body>
     <nav class="controls">
@@ -12,47 +13,27 @@
       <button>1회 뒤로가기</button>
       <button>1회 앞으로가기</button>
       <button>N번째 이동</button>
-      <button>스크롤 0</button>
-      <button>스크롤 유지</button>
+      <button>스크롤 유지함</button>
       <button>상태추가</button>
       <button>상태덮어쓰기</button>
     </nav>
     <div class="links">
-      <div><a href="#next1">다음페이지1</a></div>
-      <div><a href="#next2">다음페이지2</a></div>
-      <div><a href="#next3">다음페이지3</a></div>
-      <div><a href="#next4">다음페이지4</a></div>
+      <div id="next1">
+        <h2>1</h2>
+        <a href="#next2">다음페이지</a>
+      </div>
+      <div id="next2">
+        <h2>2</h2>
+        <a href="#next3">다음페이지</a>
+      </div>
+      <div id="next3">
+        <h2>3</h2>
+        <a href="#next4">다음페이지</a>
+      </div>
+      <div id="next4">
+        <h2>4</h2>
+        <a href="#next1">첫페이지</a>
+      </div>
     </div>
-
-    <style>
-      .controls {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        position: sticky;
-        inset: 10px 0 auto;
-        background-color: rgba(0, 0, 0, 0.2);
-        padding: 10px;
-      }
-      button {
-        font-size: 20px;
-        border: 1px solid black;
-        padding: 5px;
-        cursor: pointer;
-        &.active {
-          color: white;
-          background-color: black;
-        }
-      }
-      .links {
-        display: inline-grid;
-        grid-template-rows: repeat(4, 40vh);
-        gap: 10px;
-        font-size: 30px;
-        div {
-          padding: 30px;
-        }
-      }
-    </style>
   </body>
 </html>
