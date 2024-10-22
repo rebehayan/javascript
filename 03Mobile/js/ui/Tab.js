@@ -19,7 +19,7 @@ export const Tab = (id) => {
     return;
   }
 
-  // NodeLIst는 유사배열이므로 length를 사용하여 검사한다.
+  // NodeLIst는 배열이므로 length를 사용하여 검사한다.
   if (tabs.length === 0 || tabContents.length === 0) {
     console.log("현재 페이지에 탭이 존재하지 않습니다.");
     return;
