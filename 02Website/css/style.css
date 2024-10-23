@@ -1161,8 +1161,6 @@
     );
     height: var(--headerHeight);
     transition: 0.5s;
-    animation: header 1s both;
-    animation-timeline: scroll();
   }
   .header:has(.gnb > ul:hover) {
     height: calc(190px + var(--headerHeight));
