@@ -41,7 +41,7 @@ const keyboard = document.querySelector(".event-list .keyboard");
 const form = document.querySelector(".event-list .form");
 
 const logMessage = (message) => {
-  //   console.log(message);
+  // console.log(message);
 };
 
 // 마우스
@@ -75,48 +75,13 @@ window.addEventListener("scroll", () => logMessage("스크롤"));
 window.addEventListener("resize", () => logMessage("창크기 변화"));
 
 /* -------------------------------------------------------------------------- */
-/*                            target, currentTarget                           */
-/* -------------------------------------------------------------------------- */
-const target = document.querySelector(".target");
-const targetChildren = document.querySelector(".target .children");
-
-target.addEventListener("click", (event) => {
-  console.log(event); // 이벤트 객체확인;
-  //   console.log(event.target); // 이벤트 자손
-  //   console.log(event.currentTarget); // 이벤트타겟
-});
-
-/* -------------------------------------------------------------------------- */
 /*                                 키보드 keyCode                             */
 /* -------------------------------------------------------------------------- */
 const key = document.querySelector(".key");
 
 key.addEventListener("keydown", (event) => {
-  console.log(event); // 이벤트 키확인;
+  // console.log(event); // 이벤트 키확인;
 });
-
-/* -------------------------------------------------------------------------- */
-/*                                   기본동작 방지                             */
-/* -------------------------------------------------------------------------- */
-const link = document.querySelector(".disabled a");
-const button = document.querySelector(".disabled button");
-
-link.addEventListener("click", (event) => {
-  event.preventDefault(); // 링크의 기본 동작을 막음
-  console.log("링크가 이동하지 않습니다.");
-});
-
-button.addEventListener("click", (event) => {
-  event.preventDefault();
-  console.log("전송후 새로고침 되지 않습니다.");
-});
-
-// document.addEventListener("keydown", (event) => {
-//   if (event.key === "F5") {
-//     event.preventDefault(); // F5로 인한 새로고침 방지
-//     console.log("새로고침이 막혔습니다.");
-//   }
-// });
 
 /* -------------------------------------------------------------------------- */
 /*                                animationend                                */
