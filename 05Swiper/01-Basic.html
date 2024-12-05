@@ -1,10 +1,40 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Swiper Basic</title>
-    <script type="module" src="./01-Basic.js"></script>
-  </head>
-  <body></body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Swiper Basic</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script type="module" src="./01-Basic.js"></script>
+  <style>
+    .swiper {
+      width: 600px;
+      height: 300px;
+
+      .swiper-slide {
+        background-color: hsl(var(--bg, 10), 100%, 60%);
+
+        img {
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">1</div>
+      <div class="swiper-slide">2</div>
+      <div class="swiper-slide">3</div>
+    </div>
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+</body>
+
 </html>
