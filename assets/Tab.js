@@ -9,13 +9,13 @@ export const Tab = (id) => {
   const tabContents = document.querySelectorAll(`[data-tab-contents=${tabID}] [data-tab-content]`);
 
   if (tabID == null) {
-    console.log("탭아이디를 넣어주세요.");
+    console.error("탭아이디를 넣어주세요.");
     return;
   }
   if (typeof tabID != "string") {
     console.log(typeof tabID);
 
-    console.log("Tab ID는 String이어야 합니다.");
+    console.error("Tab ID는 String이어야 합니다.");
     return;
   }
 
@@ -31,9 +31,19 @@ export const Tab = (id) => {
     });
   };
 
+  // 페이지 로드 후 활성화 탭 정의
+  const historyCheck = () => {
+    const isActiveIndex = window.location.hash.replace("#tab", "");
+    closeTab();
+    closeContent();
+    tabs[isActiveIndex ? isActiveIndex : 0].classList.add(className);
+    tabContents[isActiveIndex ? isActiveIndex : 0].classList.add(className);
+  };
+
   // 탭열기
-  const openTab = (event) => {
+  const openTab = (event, index) => {
     event.target.classList.add(className);
+    window.location.assign(`#tab${index}`); // 주소기억
   };
 
   // 탭콘텐츠 열기
@@ -52,20 +62,20 @@ export const Tab = (id) => {
     });
   };
 
-  // 초기셋팅
+  // 초기실행
   const init = () => {
-    tabs[0].classList.add(className);
-    tabContents[0].classList.add(className);
+    historyCheck();
   };
 
   tabs.forEach((tab, index) => {
     tab.addEventListener("click", (event) => {
       closeTab();
-      openTab(event);
+      openTab(event, index);
       closeContent();
       openContent(index);
     });
   });
+  window.addEventListener("popstate", () => historyCheck());
 
   init();
 };
