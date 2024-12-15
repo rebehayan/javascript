@@ -1,6 +1,8 @@
 const levelup = document.querySelector(".levelup");
 
-// 변수정의
+/* -------------------------------------------------------------------------- */
+/*                                    변수정의                                  */
+/* -------------------------------------------------------------------------- */
 const nameValue = "CodingPing";
 const levelValue = "타입 확인";
 const staminaValue = 12555;
@@ -13,14 +15,19 @@ const shieldIcon = "📫";
 
 const image = "./images/character.webp";
 
-// 타입확인
+/* -------------------------------------------------------------------------- */
+/*                                    타입확인                                  */
+/* -------------------------------------------------------------------------- */
 levelup.addEventListener("click", () => {
+  /* ------------------- 아래의 함수에 원하는 데이터를 넣어보세요. ------------------ */
   isshow();
+  /* ----------------------------------- -- ----------------------------------- */
 });
 
-// UI 정의
-function isshow(isType) {
-  const type = document.querySelector(".type");
+/* -------------------------------------------------------------------------- */
+/*                                    초기실행                                  */
+/* -------------------------------------------------------------------------- */
+function init() {
   const nickname = document.querySelector(".name");
   const stamina = document.querySelector(".stamina");
   const attack = document.querySelector(".attack");
@@ -38,16 +45,27 @@ function isshow(isType) {
   shield.dataset.icon = shieldIcon;
 
   character.setAttribute("src", image);
+}
 
-  if (!isType) {
-    return;
-  }
-
-  document.body.insertAdjacentHTML("afterbegin", `<span class="show">${typeof isType}</span>`);
-  console.log(typeof isType);
+/* -------------------------------------------------------------------------- */
+/*                                  애니메이션 제어                             */
+/* -------------------------------------------------------------------------- */
+function isshow(data) {
   const lvup = document.querySelector(".show");
+  const istype = checkType(data);
+
+  document.body.insertAdjacentHTML("afterbegin", `<span class="show">${istype}</span>`);
+
   lvup.addEventListener("animationend", (e) => {
     e.target.remove();
   });
 }
-isshow();
+
+/* -------------------------------------------------------------------------- */
+/*                                   데이터 확인                                */
+/* -------------------------------------------------------------------------- */
+function checkType(data) {
+  return Object.prototype.toString.call(data).slice(8, -1);
+}
+
+init();
