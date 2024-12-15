@@ -20,6 +20,18 @@ const message = () => {
 };
 message();
 
+// 절차적인 작업을 수행할 때
+const handleValid = () => {
+  const private = document.querySelector(".private");
+  const inputs = private.querySelectorAll("input");
+
+  private.addEventListener("submit", () => {
+    // 전송클릭 후 기능
+  });
+};
+
+handleValid();
+
 /* ------------------------- return을 사용하지 않아도 되는 경우 ------------------------- */
 // 이벤트 헨들러 함수를 사용할 때
 const myName = () => {

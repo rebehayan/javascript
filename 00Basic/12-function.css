@@ -49,6 +49,11 @@ h2 {
     width: 100px;
   }
 }
+.private {
+  input:not([type="email"]) {
+    width: 100px;
+  }
+}
 h3:not(.change-title) {
   ~ h3 {
     padding: 20px 0 0;
