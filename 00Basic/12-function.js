@@ -91,3 +91,7 @@ const btnStopTimer = document.querySelector(".stop-timer");
 btnStopTimer.addEventListener("click", () => {
   clearInterval(interval);
 });
+
+/* -------------------------------------------------------------------------- */
+/*                                    This                                    */
+/* -------------------------------------------------------------------------- */
