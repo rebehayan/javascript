@@ -8,7 +8,7 @@
   <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="./01-start.css" />
   <script type="module">
-    export const setBaseUrl = () => {
+    const setBaseUrl = () => {
       const base = document.createElement("base");
       let baseUrl = "";
 
@@ -22,6 +22,7 @@
       document.head.prepend(base);
       window.baseUrl = baseUrl;
     }
+    setBaseUrl();
   </script>
 </head>
 
