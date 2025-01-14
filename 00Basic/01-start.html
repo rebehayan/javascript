@@ -7,39 +7,6 @@
   <title>CodingPing - Javascript</title>
   <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="./01-start.css" />
-  <script type="module">
-    const setBaseUrl = () => {
-      const base = document.createElement("base");
-      let baseUrl = "";
-
-      if (window.location.hostname === "rebehayan.github.io") {
-        baseUrl = "/javascript/";
-      } else {
-        baseUrl = "/";
-      }
-
-      base.href = baseUrl;
-      document.head.prepend(base);
-      window.baseUrl = baseUrl;
-      // const baseElement = document.querySelector("base") || document.createElement("base");
-      // let baseUrl = "";
-
-      // if (window.location.hostname === "rebehayan.github.io") {
-      //   baseUrl = "/javascript/";
-      // } else {
-      //   baseUrl = "/";
-      // }
-
-      // baseElement.href = baseUrl;
-
-      // if (!document.head.contains(baseElement)) {
-      //   document.head.prepend(baseElement); // `<base>` 태그가 없으면 추가
-      // }
-
-      // window.baseUrl = baseUrl; // 전역 변수 설정
-    }
-    setBaseUrl();
-  </script>
 </head>
 
 <body>
@@ -47,7 +14,7 @@
     <div>
       <h2 class="name">CodingPing</h2>
     </div>
-    <img src="images/character.webp" alt="" />
+    <img src="./images/character.webp" alt="" />
     <div class="data">
       <div class="stamina">12555</div>
       <div class="attack">88766</div>
