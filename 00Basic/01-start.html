@@ -9,19 +9,7 @@
   <link rel="stylesheet" href="./01-start.css" />
   <script type="module">
     const setBaseUrl = () => {
-      // const base = document.createElement("base");
-      // let baseUrl = "";
-
-      // if (window.location.hostname === "rebehayan.github.io") {
-      //   baseUrl = "/javascript/";
-      // } else {
-      //   baseUrl = "/";
-      // }
-
-      // base.href = baseUrl;
-      // document.head.prepend(base);
-      // window.baseUrl = baseUrl;
-      const baseElement = document.querySelector("base") || document.createElement("base");
+      const base = document.createElement("base");
       let baseUrl = "";
 
       if (window.location.hostname === "rebehayan.github.io") {
@@ -30,13 +18,25 @@
         baseUrl = "/";
       }
 
-      baseElement.href = baseUrl;
+      base.href = baseUrl;
+      document.head.prepend(base);
+      window.baseUrl = baseUrl;
+      // const baseElement = document.querySelector("base") || document.createElement("base");
+      // let baseUrl = "";
 
-      if (!document.head.contains(baseElement)) {
-        document.head.prepend(baseElement); // `<base>` 태그가 없으면 추가
-      }
+      // if (window.location.hostname === "rebehayan.github.io") {
+      //   baseUrl = "/javascript/";
+      // } else {
+      //   baseUrl = "/";
+      // }
 
-      window.baseUrl = baseUrl; // 전역 변수 설정
+      // baseElement.href = baseUrl;
+
+      // if (!document.head.contains(baseElement)) {
+      //   document.head.prepend(baseElement); // `<base>` 태그가 없으면 추가
+      // }
+
+      // window.baseUrl = baseUrl; // 전역 변수 설정
     }
     setBaseUrl();
   </script>
