@@ -7,6 +7,22 @@
   <title>CodingPing - Javascript</title>
   <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="./01-start.css" />
+  <script type="module">
+    export const setBaseUrl = () => {
+      const base = document.createElement("base");
+      let baseUrl = "";
+
+      if (window.location.hostname === "rebehayan.github.io") {
+        baseUrl = "/javascript/";
+      } else {
+        baseUrl = "/";
+      }
+
+      base.href = baseUrl;
+      document.head.prepend(base);
+      window.baseUrl = baseUrl;
+    }
+  </script>
 </head>
 
 <body>
