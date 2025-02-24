@@ -6,16 +6,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>폼7</title>
   <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/form7.css">
 </head>
 
 <body>
   <div class="wrapper">
 
-    <form>
-      <fieldset>
+    <form class="join">
+      <div class="align both">
         <legend>필수 정보</legend>
-        <p>* 필수 입력 항목입니다.</p>
-        <table border="1" width="100%">
+        <p class="tip"><span class="color-primary">*</span> 필수 입력 항목입니다.</p>
+      </div>
+      <fieldset>
+        <table class="table-type7">
           <caption>
             회원가입 필수 정보
           </caption>
@@ -25,31 +28,31 @@
           </colgroup>
           <tbody>
             <tr>
-              <th><label for="txt7_1">아이디 *</label></th>
+              <th><label for="txt7_1">아이디 <span class="color-primary">*</span></label></th>
               <td>
                 <input type="text" id="txt7_1">
-                <button type="button">중복확인</button>
+                <button type="button" class="btn-white">중복확인</button>
               </td>
             </tr>
             <tr>
-              <th><label for="txt7_2">패스워드 *</label></th>
+              <th><label for="txt7_2">패스워드 <span class="color-primary">*</span></label></th>
               <td>
                 <input type="password" id="txt7_2" minlength="8" maxlength="16">
-                <p>※비밀번호는 영문/숫자/특수문자를 조합하여 8~16자로 입력해주세요.</p>
+                <p class="text-type1">※비밀번호는 영문/숫자/특수문자를 조합하여 8~16자로 입력해주세요.</p>
               </td>
             </tr>
             <tr>
-              <th><label for="txt7_3">패스워드 확인*</label></th>
+              <th><label for="txt7_3">패스워드 확인<span class="color-primary">*</span></label></th>
               <td>
                 <input type="password" id="txt7_3" minlength="8" maxlength="16">
               </td>
             </tr>
             <tr>
-              <th><label for="txt7_4">이름 *</label></th>
+              <th><label for="txt7_4">이름 <span class="color-primary">*</span></label></th>
               <td><input type="text" id="txt7_4"></td>
             </tr>
             <tr>
-              <th>휴대전화 *</th>
+              <th>휴대전화 <span class="color-primary">*</span></th>
               <td>
                 <select title="휴대전화 첫번째 자리">
                   <option value="">선택</option>
@@ -62,7 +65,7 @@
               </td>
             </tr>
             <tr>
-              <th>이메일 *</th>
+              <th>이메일 <span class="color-primary">*</span></th>
               <td>
                 <div class="email">
                   <input type="text" title="이메일 아이디">
@@ -76,33 +79,35 @@
                     <option value="nate.com">nate.com</option>
                   </select>
                 </div>
-                <p>
+                <p class="text-type1">
                   ※ 기업 그룹웨어 메일인 경우 문자가 깨질수도 있습니다. 한메일 사용자의 경우
                   수신이 원할하지 않을수 있습니다.
                 </p>
               </td>
             </tr>
             <tr>
-              <th>주소 *</th>
+              <th>주소 <span class="color-primary">*</span></th>
               <td>
-                <input type="number" readonly="" title="우편번호">
-                <button type="button">우편 번호 검색</button><br>
-                <input type="text" title="기본주소" readonly="">
-                <input type="text" title="상세주소">
+                <div class="address">
+                  <input type="number" readonly title="우편번호">
+                  <button type="button" class="btn-white">우편 번호 검색</button>
+                  <input type="text" title="기본주소" readonly>
+                  <input type="text" title="상세주소">
+                </div>
               </td>
             </tr>
           </tbody>
         </table>
       </fieldset>
 
-      <fieldset>
+      <fieldset class="mt60">
         <legend>선택 정보</legend>
-        <table border="1" width="100%">
+        <table class="table-type7">
           <caption>
             회원가입 선택 정보
           </caption>
           <colgroup>
-            <col style="width: 140px">
+            <col style=" width: 140px">
             <col>
           </colgroup>
           <tbody>
@@ -110,7 +115,7 @@
               <th><label for="txt7_2_1">추천인 아이디</label></th>
               <td>
                 <input type="text" id="txt7_2_1">
-                <button type="button">추천인 아이디확인</button>
+                <button type="button" class="btn-white">추천인 아이디확인</button>
                 <p id="message"></p>
               </td>
             </tr>
@@ -130,9 +135,9 @@
           </tbody>
         </table>
       </fieldset>
-      <div>
-        <button type="button">취소</button>
-        <button type="button">회원가입 완료</button>
+      <div class="align center btns mt50">
+        <button type="button" class="btn-black">취소</button>
+        <button type="button" class="btn-red">회원가입 완료</button>
       </div>
     </form>
   </div>

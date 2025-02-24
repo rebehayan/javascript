@@ -30,6 +30,7 @@
   background-color: transparent;
 }
 :where(fieldset) {
+  border: none;
   padding: 0;
 }
 :where(a) {
