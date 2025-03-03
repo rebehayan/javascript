@@ -1,4 +1,5 @@
 const mobileSize = 1280;
+
 const removeClass = (array) => {
   array.forEach((a) => a.classList.remove("active"));
 };
@@ -8,8 +9,8 @@ export const Sidebar = () => {
   const gnb = document.querySelector("#gnb");
   const toggle = document.querySelector(".toggle");
   const links = gnb.querySelectorAll("a");
-  const current = sessionStorage.getItem("src");
   const details = sidebar.querySelectorAll("details");
+  const current = sessionStorage.getItem("src");
 
   // popover 열림
   sidebar.show();
@@ -53,12 +54,16 @@ export const Sidebar = () => {
     if (!current) return;
 
     links.forEach((link) => {
-      const linkText = link.textContent.toLocaleLowerCase();
+      const linkText = link.getAttribute("href");
 
       if (current.includes(linkText)) {
         details.forEach((detail) => detail.removeAttribute("open"));
 
+        removeClass(links);
+        link.classList.add("active");
+
         const parentDetail = link.closest("details");
+
         if (parentDetail) {
           parentDetail.setAttribute("open", true);
         }
