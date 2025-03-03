@@ -16,7 +16,6 @@ const image = "./images/character.webp";
 /* -------------------------------------------------------------------------- */
 /*                                    UI 정의                                   */
 /* -------------------------------------------------------------------------- */
-const type = document.querySelector(".type");
 const nickname = document.querySelector(".name");
 const stamina = document.querySelector(".stamina");
 const attack = document.querySelector(".attack");
@@ -24,6 +23,7 @@ const shield = document.querySelector(".shield");
 const character = document.querySelector(".character img");
 const levelup = document.querySelector(".levelup");
 
+// 변수값 적용
 nickname.innerText = nameValue;
 stamina.innerText = staminaValue;
 attack.innerText = attackValue;
