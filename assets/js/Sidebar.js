@@ -10,7 +10,6 @@ export const Sidebar = () => {
   const links = gnb.querySelectorAll("a");
   const current = sessionStorage.getItem("src");
   const details = sidebar.querySelectorAll("details");
-  let isActive = false;
 
   // popover 열림
   sidebar.show();
@@ -24,9 +23,8 @@ export const Sidebar = () => {
 
     link.addEventListener("click", (e) => {
       if (window.innerWidth < mobileSize) {
-        sidebar.hide();
+        sidebar.close();
       }
-
       removeClass(links);
       e.target.classList.add("active");
       sessionStorage.setItem("src", e.target.getAttribute("href"));
@@ -34,12 +32,11 @@ export const Sidebar = () => {
   });
 
   toggle.addEventListener("click", () => {
-    if (!isActive) {
+    if (sidebar.hasAttribute("open")) {
       sidebar.close();
     } else {
       sidebar.show();
     }
-    isActive = !isActive;
   });
 
   // 반응형 사이드바
@@ -47,7 +44,7 @@ export const Sidebar = () => {
     if (window.innerWidth < mobileSize) {
       sidebar.close();
     } else {
-      sidebar.showModal();
+      sidebar.show();
     }
   };
 

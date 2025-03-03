@@ -1,11 +1,13 @@
+const mobileSize = 1280;
+const frame = document.querySelector("iframe");
+const button = document.querySelector(".btn-mobile");
+
 const newTab = (link) => {
   const linkTag = document.querySelector(".blank");
   linkTag.setAttribute("href", link);
 };
 
 const viewMobild = () => {
-  const frame = document.querySelector("iframe");
-  const button = document.querySelector(".btn-mobile");
   button.addEventListener("click", (e) => {
     switch (e.target.textContent) {
       case "모바일 보기":
@@ -23,6 +25,17 @@ const viewMobild = () => {
     }
   });
 };
+
+const resizeButton = () => {
+  if (window.innerWidth < mobileSize) {
+    button.style.display = "none";
+  } else {
+    button.style.display = "flex";
+  }
+};
+
+window.addEventListener("resize", resizeButton);
+window.addEventListener("load", resizeButton);
 
 export const Header = () => {
   const gnb = document.querySelector("#gnb");

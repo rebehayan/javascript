@@ -11,6 +11,6 @@ import { Header } from "./Header.js";
 // Back();
 (async () => {
   await GNB();
-  await Sidebar();
-  await Header();
+  Sidebar();
+  Header();
 })();
