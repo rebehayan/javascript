@@ -29,7 +29,7 @@ const link = (title, link) => {
     case "swiper":
       return `/05Swiper/${link}`;
       break;
-    case "chart":
+    case "chartjs":
       return `/06Chart/${link}`;
       break;
     case "gsap":

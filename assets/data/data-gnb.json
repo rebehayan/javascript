@@ -478,7 +478,7 @@
     ]
   },
   {
-    "title": "ChartJS",
+    "title": "chartjs",
     "nav": [
       {
         "name": "Basic",
@@ -523,7 +523,7 @@
     ]
   },
   {
-    "title": "GSAP",
+    "title": "gsap",
     "nav": [
       {
         "name": "Basic",
