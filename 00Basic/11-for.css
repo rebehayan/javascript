@@ -4,6 +4,7 @@
   font-style: normal;
   list-style: none;
 }
+
 body {
   padding: 30px;
 }
@@ -13,6 +14,7 @@ button {
   background-color: transparent;
   border: none;
 }
+
 a {
   color: inherit;
   text-decoration: none;
@@ -26,9 +28,11 @@ a {
   border-radius: 5px;
   padding: 20px;
   margin-block: 10px;
+
   li {
     font-size: 1.2rem;
     text-align: center;
+
     &::before {
       content: "";
       display: block;
@@ -36,21 +40,25 @@ a {
       border-radius: 1rem;
       margin-bottom: 0.5rem;
     }
+
     &.ico1 {
       &::before {
         background: url(./images/ico1.svg) no-repeat center / 30% auto hsl(var(--color, 50), 100%, 85%);
       }
     }
+
     &.ico2 {
       &::before {
         background: url(./images/ico2.svg) no-repeat center / 30% auto hsl(var(--color, 50), 100%, 85%);
       }
     }
+
     &.ico3 {
       &::before {
         background: url(./images/ico3.svg) no-repeat center / 30% auto hsl(var(--color, 50), 100%, 85%);
       }
     }
+
     &.ico4 {
       &::before {
         background: url(./images/ico4.svg) no-repeat center / 30% auto hsl(var(--color, 50), 100%, 85%);
@@ -63,6 +71,7 @@ a {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
   gap: 1rem;
+
   li {
     aspect-ratio: 1;
     background-color: hsl(var(--color), 100%, 85%);
@@ -72,8 +81,10 @@ a {
     border-radius: 0.4rem;
   }
 }
+
 .forof2 {
   display: flex;
+
   li {
     color: hsl(var(--color), 90%, 40%);
     font-size: 1.2rem;
@@ -83,18 +94,23 @@ a {
 .forin {
   display: flex;
   font-size: 1.5rem;
+
   li {
     padding-inline: 1.5rem;
+
     + li {
       background: linear-gradient(to right, silver, silver) no-repeat left / 1px 1rem;
     }
   }
+
   .name {
     font-weight: 800;
   }
+
   .age {
     color: violet;
   }
+
   .role {
     text-decoration-line: underline;
     text-decoration-color: tomato;

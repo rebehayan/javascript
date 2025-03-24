@@ -22,7 +22,7 @@
 /*                                  Controls                                  */
 /* -------------------------------------------------------------------------- */
 
-const tween = gsap.to(".control-wrap .ghost", {
+const tween = gsap.to(".control-wrap .car", {
   duration: 4,
   x: 300,
   ease: "none",
