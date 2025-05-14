@@ -58,6 +58,23 @@
       </fieldset>
     </form>
   </div>
+  <script>
+    const all = document.querySelectorAll('.all');
+    all.forEach((el) => {
+
+      el.addEventListener('click', (e) => {
+        const parent = e.target.parentElement;
+        const checks = parent.querySelectorAll('input');
+        console.log(e.target.checked);
+
+
+        checks.forEach((el) => {
+          el.checked = e.target.checked;
+        })
+
+      })
+    })
+  </script>
 </body>
 
 </html>
