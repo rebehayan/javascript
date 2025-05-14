@@ -1,8 +1,9 @@
 const mobileSize = 1280;
 const frame = document.querySelector("iframe");
 const button = document.querySelector(".btn-mobile");
+const initial = "/00Basic/01-start.html";
 
-const newTab = (link) => {
+const newTab = (link = initial) => {
   const linkTag = document.querySelector(".blank");
   linkTag.setAttribute("href", link);
 };
@@ -40,6 +41,7 @@ window.addEventListener("load", resizeButton);
 export const Header = () => {
   const gnb = document.querySelector("#gnb");
   const links = gnb.querySelectorAll("a");
+  newTab();
 
   links.forEach((link) => {
     link.addEventListener("click", () => {

@@ -68,17 +68,17 @@ export const GNB = async () => {
               </ul>
             `
               : item.depth
-                  .map((depthItem) => {
+                  .map((depthItem, idx) => {
                     return /* html */ `
                       <strong>${depthItem.title}</strong>
                       ${
                         depthItem.nav &&
                         `<ul>
                           ${depthItem.nav
-                            .map((navItem) => {
+                            .map((navItem, i) => {
                               return /* html */ `
                                 <li>
-                                    <a href="${link(item.title, navItem.link)}" target="frame">${navItem.name}</a>
+                                    <a href="${link(item.title, navItem.link)}" target="frame"  class="${idx === 0 && i === 0 ? "active" : ""}">${navItem.name}</a>
                                 </li>
                               `;
                             })
