@@ -1,24 +1,31 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>콘텐츠6</title>
-    <link rel="stylesheet" href="./css/reset.css" />
-    <link rel="stylesheet" href="./css/content6.css" />
-  </head>
 
-  <body>
-    <div class="wrapper">
-      <form>
-        <fieldset>
-          <legend>본인인증</legend>
-          <ul class="certification">
-            <li><input type="tel" required placeholder="휴대폰 번호(숫자만)" /><button type="button">인증요청</button></li>
-            <li><input type="number" required placeholder="인증번호" /><span class="counter">00:00</span><button type="submit" disabled>시간연장</button></li>
-          </ul>
-        </fieldset>
-      </form>
-    </div>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>콘텐츠6</title>
+  <link rel="stylesheet" href="./css/reset.css" />
+  <link rel="stylesheet" href="./css/content6.css" />
+  <script defer src="./test.js"></script>
+</head>
+
+<body>
+  <div class="wrapper">
+    <h2>댓글 작성</h2>
+    <input type="text" id="commentInput" placeholder="댓글을 입력하세요" />
+    <button onclick="addComment()">등록</button>
+    <div id="commentList"></div>
+  </div>
+  <div class="wrapper">
+    <h2>페이지 콘텐츠 전환</h2>
+    <button onclick="navigate('home')">홈</button>
+    <button onclick="navigate('about')">소개</button>
+    <button onclick="navigate('contact')">문의</button>
+    <div id="pageContent">메뉴를 선택해주세요.</div>
+  </div>
+
+
+</body>
+
 </html>

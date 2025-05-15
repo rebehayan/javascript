@@ -34,3 +34,20 @@
     }
   }
 }
+
+.btn-insert {
+  padding: 10px 16px;
+  border: none;
+  background: #007bff;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  &:hover {
+    background: #0056b3;
+  }
+}
+
+.mt20 {
+  margin-top: 20px;
+}
