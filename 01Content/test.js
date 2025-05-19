@@ -16,21 +16,24 @@ function showAlert(message) {
 
 // 4. 댓글 작성
 function addComment() {
-  const input = document.getElementById("commentInput");
-  const comment = input.value.trim();
+  const input = document.getElementById("comment-input");
+  const comment = input.value.trim(); //공백삭제
   if (comment) {
-    const list = document.getElementById("commentList");
+    const list = document.getElementById("comment-list");
+    // list.innerHTML = list.innerHTML + `<div class="card">${comment}</div>`; //정순
+    // list.innerHTML = `<div class="card">${comment}</div>` + list.innerHTML; //역순
     list.innerHTML += `<div class="card">${comment}</div>`;
-    input.value = "";
+    input.value = ""; //입력란비우기
   }
 }
 
 // 5. 페이지 전환 시뮬레이션
 function navigate(page) {
   const pages = {
-    home: "<h3>홈</h3><p>환영합니다! 여기는 홈 페이지입니다.</p>",
-    about: "<h3>소개</h3><p>이 사이트는 교육용으로 만들어졌습니다.</p>",
-    contact: "<h3>문의</h3><p>문의는 help@example.com 으로 주세요.</p>",
+    binder: "<h3>가계약</h3><p>보험증권이 발행될 때까지의 무보험 상태를 메꾸기 위한 계약을 말한다.</p>",
+    refresh:
+      "<h3>갱신</h3><p>종전 보험계약의 만기때 원칙적으로 본래의 보험계약과 동일한 내용·조건(보험기간은 제외)을 가지고 새로운 보험계약을 체결하는 것을 말한다. 이 경우에는 새로운 보험증권이 발행된다.</p>",
+    expiration: "<h3>만기</h3><p>정해진 보험기간이 다 경과하여 끝난 때를 말한다.</p>",
   };
   document.getElementById("pageContent").innerHTML = pages[page];
 }

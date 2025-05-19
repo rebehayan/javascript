@@ -137,7 +137,7 @@
           },
           {
             "name": "정규식",
-            "link": "37-regexp.html"
+            "link": "37-regex.html"
           },
           {
             "name": "JSON",
@@ -145,7 +145,7 @@
           },
           {
             "name": "쿠키와 스토리지",
-            "link": "39-cokkie.html"
+            "link": "39-cookie.html"
           }
         ]
       }
