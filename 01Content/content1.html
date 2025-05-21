@@ -23,11 +23,11 @@
         <span>소계</span>
         <div>15,620원</div>
       </li>
-      <li>
-        <span>총 결제 금액</span>
-        <div>원</div>
-      </li>
     </ul>
+    <div class="total">
+      <span>총 결제 금액</span>
+      <div>원</div>
+    </div>
   </div>
   <style>
     .payment-details {
@@ -39,19 +39,23 @@
         display: flex;
         justify-content: space-between;
 
-        &:last-child {
-          border-top: 1px solid silver;
-          padding-top: 10px;
-          font-weight: 700;
-
-          div {
-            color: orangered;
-          }
-        }
       }
 
       div {
         color: midnightblue
+      }
+    }
+
+    .total {
+      display: flex;
+      justify-content: space-between;
+      border-top: 1px solid silver;
+      padding-top: 10px;
+      margin-top: 10px;
+      font-weight: 700;
+
+      div {
+        color: orangered;
       }
     }
   </style>
