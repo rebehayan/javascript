@@ -38,6 +38,8 @@ change.addEventListener("change", function (e) {
 });
 
 submit.addEventListener("submit", function (e) {
+  console.log(e);
+
   e.preventDefault();
   const id = submitID.value;
   const nickname = submitNickname.value;
