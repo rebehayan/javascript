@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>DOM - Javascript</title>
-  <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon" />
   <link rel="stylesheet" href="07-DOM.css" />
   <script src="07-DOM.js" defer></script>
 </head>
@@ -251,6 +251,19 @@
         </button>
       </li>
     </ul>
+
+    <h2 class="heading">DOM 추가/삭제</h2>
+    <section class="comment">
+      <form>
+        <fieldset>
+          <legend>댓글입력</legend>
+          <input class="comment-input" placeholder="댓글 입력" />
+          <button type="submit" class="btn-add-html">HTML로 추가</button>
+          <button type="submit" class="btn-add-dom">DOM으로 추가</button>
+        </fieldset>
+      </form>
+      <ul class="comment-list"></ul>
+    </section>
   </main>
 
   <!-- open속성을 추가하여 속성을 제어하세요. -->

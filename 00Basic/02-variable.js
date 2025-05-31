@@ -1,17 +1,17 @@
 /* -------------------------------------------------------------------------- */
 /*                                    변수정의                                  */
 /* -------------------------------------------------------------------------- */
-const nameValue = "CodingPing";
-const levelValue = "LEVEL UP";
-const staminaValue = 12555;
-const attackValue = 88766;
-const shieldValue = 28745;
+let nameValue = "CodingPing";
+let levelValue = "LEVEL UP";
+let staminaValue = 12555;
+let attackValue = 88766;
+let shieldValue = 28745;
 
-const staminaIcon = "🦾";
-const attackIcon = "🔪";
-const shieldIcon = "📫";
+let staminaIcon = "🦾";
+let attackIcon = "🔪";
+let shieldIcon = "📫";
 
-const image = "./images/character.webp";
+let image = "./images/character.webp";
 
 /* -------------------------------------------------------------------------- */
 /*                                    UI 정의                                   */
