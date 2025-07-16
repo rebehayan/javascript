@@ -49,9 +49,6 @@ table {
         color: #2352a4;
       }
     }
-    tr:nth-child(even) {
-      display: none;
-    }
     td {
       color: #7d7d7d;
       font-size: 14px;
@@ -74,6 +71,23 @@ table {
     font-size: 13px;
     font-weight: 400;
     line-height: 22px;
+  }
+  tr:has(.answer) {
+    border-top: none;
+    .answer {
+      overflow: hidden;
+      padding-block: 0;
+      height: 0;
+      transition: height 0.5s, padding-block 0.5s;
+    }
+  }
+  tr:has(.answer.active) {
+    border-top: 1px solid #e1e1e1;
+
+    .answer {
+      padding-block: 37px;
+      height: calc-size(auto, size);
+    }
   }
 }
 
